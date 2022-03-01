@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* (paragraphs) */
+    --Transparent-white : hsla(0, 0%, 100%, 0.75);
+    /* (background, headings, buttons) */
+    --Very-light-gray : hsl(0, 0%, 95%);
+
+    --font-family-1: 'Big Shoulders Display', cursive;
+    --font-family-2: 'Lexend Deca', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--Very-light-gray);
+}
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-1,.grid-2,.grid-3{
+    width: 300px;
+    height: 400px;
+    padding: 2rem 2rem;
+}
+.grid-1{
+    background: var(--Bright-orange);
+    border-radius: 10px 0 0 10px;
+}
+.grid-2{
+    background: var(--Dark-cyan);
+}
+.grid-3{
+    background: var(--Very-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+h1{
+    color: var(--Very-light-gray);
+    font-family: var(--font-family-1);
+    margin: 1rem 0;
+}
+p{
+    color: var(--Transparent-white);
+    font-family: var(--font-family-2);
+}
+button{
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    border: none;
+    border-radius: 2rem;
+    font-family: var(--font-family-2); 
+    background: var(--Very-light-gray);  
+    cursor: pointer;
+}
+.grid-1 button{
+    color: var(--Bright-orange);
+}
+.grid-2 button{
+    color: var(--Dark-cyan);
+}
+.grid-3 button{
+    color: var(--Very-dark-cyan);
+}
+button:hover{
+    color: var(--Very-light-gray);
+    background: transparent;
+    border: 2px solid var(--Very-light-gray);
+}
+@media screen and (max-width:700px) {
+    main{
+        margin: 3rem 0;
+    }
+    .main-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .grid-1{
+        border-radius: 10px 10px 0 0;
+    }
+    .grid-3{
+        border-radius: 0 0 10px 10px;
+    } 
+}
